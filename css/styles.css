@@ -1,5 +1,4 @@
 :root {
-  --color-black: #333;
   --color-pink: #e892ab;
   --color-red: #ea5859;
   --body-font: 'Outfit', sans-serif;
@@ -8,7 +7,8 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--color-black);
+  color: #333;
+  background-color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -17,7 +17,8 @@ body {
 h1 {
   color: var(--color-red);
   font-family: var(--title-font);
-  margin: 0;
+  font-size: 48px;
+  margin: 32px 0 16px 0;
   padding: 16px;
   text-align: center;
 }
@@ -28,11 +29,9 @@ nav {
 }
 
 nav ul {
-  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-content: center;
 }
 
 nav ul li {
@@ -45,15 +44,36 @@ nav ul li a {
   font-family: var(--body-font);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
 }
 
-h2, h3, h4, p {
-  margin: 16px;
-  padding: 8px 0;
+/* Hover effect */
+nav ul li a:hover {
+  color: var(--color-red);
+  transform: translateY(-2px);
+  border-bottom: 2px solid var(--color-red);
+}
+
+h2, h3, h4 {
+  text-align: center;
+  margin-top: 48px;
+  color: var(--color-red);
+  font-family: var(--title-font);
+  font-size: 28px;
+}
+
+p {
+  max-width: 600px;
+  margin: 16px auto;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #333;
 }
 
 footer {
   text-align: center;
-  padding: 12px;
+  padding: 32px 0;
   font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #eee;
 }
