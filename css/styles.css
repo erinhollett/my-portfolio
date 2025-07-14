@@ -51,7 +51,7 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--color-red);
   transform: translateY(-2px);
-  border-bottom: 2px solid var(--color-red);
+  border-bottom: 2px solid var(--color-red); 
 }
 
 h2, h3, h4 {
@@ -71,9 +71,14 @@ p {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
-  padding: 32px 0;
+  padding: 16px 0;
   font-size: 14px;
   color: #aaa;
   border-top: 1px solid #eee;
+  background-color: #fff;
 }
