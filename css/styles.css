@@ -8,6 +8,10 @@
   --hover-bounce: translateY(-2px); /* Hover: moves element up 2 pixels */
 }
 
+html {
+  scroll-behavior: smooth; /* less choppy scrolling */
+}
+
 body {
   font-family: var(--body-font);
   color: #333;
