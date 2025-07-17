@@ -1,9 +1,10 @@
+/* == Variables == */
 :root {
   --color-pink: #e892ab;
   --color-red: #ea5859;
   --body-font: 'Outfit', sans-serif;
   --title-font: 'Cormorant Garamond', serif;
-  --hover-bounce: translateY(-2px); 
+  --hover-bounce: translateY(-2px); /* moves element up 2 pixels */
 }
 
 body {
@@ -12,7 +13,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
-  padding-bottom: 60px;
+  padding-bottom: 60px; /* leaves space for the footer */
   line-height: 1.6;
 }
 
@@ -25,6 +26,7 @@ h1 {
   text-align: center;
 }
 
+/* == Navigation Bar == */
 nav {
   text-align: center;
   padding: 16px 0;
@@ -37,7 +39,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline-block; /* arrange horazontally */
   margin: 0 16px;
 }
 
@@ -46,16 +48,17 @@ nav ul li a {
   font-family: var(--body-font);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s; /* smooth hover animation */
 }
 
 /* Hover effect */
 nav ul li a:hover {
   color: var(--color-red);
   transform: var(--hover-bounce);
-  border-bottom: 2px solid var(--color-red); 
+  border-bottom: 2px solid var(--color-red); /* add an underline */
 }
 
+/* == Main Text (Headers & Paragraphs) == */
 h2, h3, h5 {
   text-align: center;
   margin-top: 48px;
@@ -66,7 +69,7 @@ h2, h3, h5 {
 
 p {
   max-width: 600px;
-  margin: 16px auto;
+  margin: 16px auto; /* auto horizontally centers */
   padding: 0 16px;
   font-size: 16px;
   color: #333;
@@ -78,6 +81,18 @@ h4 {
   color: var(--color-red);
   font-size: 24px;
   margin: 32px 0 12px 0;
+}
+
+/* == Project Information == */
+.project-details {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#projects {
+  margin-bottom: 48px;
 }
 
 .project-details ul {
@@ -98,10 +113,11 @@ h4 {
 }
 
 .project-details ul li::before {
-  content: "–";
+  content: "–"; /* replace default bulletpoint */
   margin-right: 8px;
 }
 
+/* == Project Buttons == */
 .toggle-details {
   display: block;
   margin: 16px auto;
@@ -122,17 +138,6 @@ h4 {
   transform: var(--hover-bounce);
 }
 
-.project-details {
-  display: none;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-#projects {
-  margin-bottom: 48px;
-}
-
 footer {
   position: fixed;
   bottom: 0;
@@ -146,7 +151,7 @@ footer {
   background-color: #fff;
 }
 
-/* Adjusting for mobile display: */
+/* == Mobile Display Adjustments == */
 
 @media (max-width: 768px) {
   nav ul li {
