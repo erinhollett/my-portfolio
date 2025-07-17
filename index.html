@@ -24,12 +24,28 @@
   <h2>About Me</h2>
   <p>I'm a software engineer that's transitioning from marketing into computer science. I have an honours diploma in Business Administration - Marketing and over three years of experience leading marketing and web projects in my roles as Marketing Coordinator. I'm currently perusing a Computer Programming diploma at Humber College.</p>
 
+  <section id="projects">
   <h3>My Projects</h3>
-  <p>Coming Soon!</p>
+  <h4>Super Spy Cam</h4>
+  <button class="toggle-details">Read more</button>
+  <p>I built a personal project, Super Spy Cam. It’s a motion-triggered surveillance system written in Python that uses a webcam to monitor your doorway, record video once it detects movement, and sends real-time alerts (with video attachments) to a Discord channel using the official Discord HTTP API. It also includes a lightweight HTTP server to browse the captured footage from your local browser. I built this project after a package was stolen from outside my apartment. My plan is to mount a webcam behind the peephole of my front door and connect it to a spare computer (which will run this app).</p>
+  <p>Technologies Used:</p>
+  <ul>
+    <li><b>Language:</b> Python 3</li>
+    <li><b>Camera Input:</b> cv2.VideoCapture() from OpenCV</li>
+    <li><b>Video Encoding:</b> OpenCV cv2.VideoWriter</li>
+    <li><b>Discord Integration:</b> Python requests library using Discord Bot Token & Channel API</li>
+    <li><b>Web Server:</b> Python http.server module via HTTPServer and BaseHTTPRequestHandler</li>
+    <li><b>Frontend:</b> HTML, JavaScript (fetch API), JSON</li>
+    <li><b>Filesystem:</b> Python os, datetime, and json modules  for file naming, lookup, and timestamp formatting</li>
+</ul>
+  </section>
 
-  <h4>Contact Me</h4>
+  <h5>Contact Me</h5>
   <p>Coming Soon!</p>
 
   <footer>&copy; Erin Hollett 2025.</footer>
+
+  <script src="script.js" defer></script> 
 </body>
 </html>
