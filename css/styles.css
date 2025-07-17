@@ -4,7 +4,8 @@
   --color-red: #ea5859;
   --body-font: 'Outfit', sans-serif;
   --title-font: 'Cormorant Garamond', serif;
-  --hover-bounce: translateY(-2px); /* moves element up 2 pixels */
+  --max-width: 600px; /* max width for all text content */
+  --hover-bounce: translateY(-2px); /* Hover: moves element up 2 pixels */
 }
 
 body {
@@ -68,19 +69,61 @@ h2, h3, h5 {
 }
 
 p {
-  max-width: 600px;
+  max-width: var(--max-width);
   margin: 16px auto; /* auto horizontally centers */
   padding: 0 16px;
   font-size: 16px;
   color: #333;
 }
 
-h4 {
-  text-align: center;
+/* == Project Headers == */
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-header h4 {
   font-family: var(--title-font);
   color: var(--color-red);
-  font-size: 24px;
-  margin: 32px 0 12px 0;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* == Project Buttons == */
+.toggle-details {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--body-font);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-pink);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+  text-align: right;
+}
+
+.toggle-details::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--color-pink);
+  transition: background-color 0.3s;
+}
+
+.toggle-details:hover {
+  color: var(--color-red);
+}
+
+.toggle-details:hover::after {
+  background-color: var(--color-red);
 }
 
 /* == Project Information == */
@@ -95,8 +138,9 @@ h4 {
   margin-bottom: 48px;
 }
 
+/* == Project Information List == */
 .project-details ul {
-  max-width: 600px;
+  max-width: var(--max-width);
   margin: 0 auto 24px auto;
   padding-left: 20px;
   font-size: 16px;
@@ -117,10 +161,40 @@ h4 {
   margin-right: 8px;
 }
 
-/* == Project Buttons == */
-.toggle-details {
+/* == Contact Form == */
+form {
+  max-width: var(--max-width);
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: var(--body-font);
+}
+
+form label {
   display: block;
-  margin: 16px auto;
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--color-red);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  box-sizing: border-box;
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical; /* resizes downward */
+}
+
+form button[type="submit"] {
+  display: block;
+  margin: 24px auto 0 auto;
   padding: 10px 20px;
   font-family: var(--body-font);
   font-size: 15px;
@@ -133,7 +207,7 @@ h4 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.toggle-details:hover {
+form button[type="submit"]:hover {
   background-color: var(--color-red);
   transform: var(--hover-bounce);
 }
@@ -150,6 +224,8 @@ footer {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
+
+
 
 /* == Mobile Display Adjustments == */
 
