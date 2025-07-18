@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
       showMessage("Please fill out all of the fields", "error");
     } else {
       showMessage("Form submitted", "success");
-      form.reset(); // Optional: clears the form
+      form.reset(); // Clears the form
     }
   });
 
+  // Show success and error messages for form submissions
   function showMessage(message, type) {
     messageBox.textContent = message;
     messageBox.className = `form-message ${type}`;
@@ -55,3 +56,16 @@ function validateForm() {
 
   return true;
 }
+
+// Timestamp in footer of when website was last updated
+document.addEventListener("DOMContentLoaded", () => {
+  const lastUpdate = document.getElementById("last-updated");
+  const raw = lastUpdate.dataset.updated;
+  const updatedDate = moment(raw);
+  const now = moment(); // Creates the moment.js element
+  const diff = now.diff(updatedDate, 'days'); // Calc days passed between current time and updatedDate
+  lastUpdate.textContent = `Last updated ${diff === 0 ? 'today' : `${diff} day${diff > 1 ? 's' : ''} ago`}`; // Display in html
+  // If diff === 0 -> write: Last updated today
+  // If diff === 1 -> write: Last updated 1 day ago
+  // If diff === 5 -> write: Last updated 5 days ago
+});
