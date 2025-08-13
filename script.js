@@ -71,18 +71,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const icon = document.getElementById("theme-icon");
+const toggleTheme = document.getElementById("theme-toggle");
 
 const lightIcon = "light.png";
 const darkIcon = "dark.png";
 
+// Start the current mode at light be default
 let currentMode = "light";
 
 icon.addEventListener("click", () => {
   if (currentMode === "light") {
+    // Change to dark mode:
+    document.documentElement.classList.add("dark");
     icon.src = darkIcon;
     currentMode = "dark";
   }
   else if (currentMode === "dark") {
+    // Change to light mode:
+    document.documentElement.classList.remove("dark");
     icon.src = lightIcon;
     currentMode = "light";
   }
