@@ -131,8 +131,30 @@ p {
   color: var(--text);
 }
 
-/* == Project Headers == */
+/* == Skills Section == */
+.skills-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 140px 1fr; /* label | items */
+  column-gap: 16px;
+  row-gap: 8px;
+}
 
+.skills-list dt {
+  margin: 0;
+  font-family: var(--body-font);
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.skills-list dd {
+  margin: 0;
+  color: var(--text);
+}
+
+/* == Project Headers == */
 .project-header {
   display: flex;
   justify-content: space-between;
