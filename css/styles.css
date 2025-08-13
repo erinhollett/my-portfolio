@@ -216,6 +216,32 @@ p {
   margin-right: 8px;
 }
 
+/* GitHub link button */
+.gh-link {
+  width: 140px;
+  height: 56px;
+  display: inline-block;
+
+  background: center/contain no-repeat url("../img/github-light.png");
+
+  /* make it look like a button without borders */
+  border: 0;
+  cursor: pointer;
+  transition: transform .15s ease, background-image .2s ease;
+}
+
+.project-details .gh-link {
+  display: block;
+  margin: 12px 0 0 auto; 
+}
+
+/* swap to the dark version when the user hovers over it */
+.gh-link:hover,
+.gh-link:focus-visible {
+  background-image: url("../img/github-dark.png");
+  transform: var(--hover-bounce);
+}
+
 /* == Contact Form == */
 form {
   max-width: var(--max-width);
