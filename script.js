@@ -69,3 +69,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // If diff === 1 -> write: Last updated 1 day ago
   // If diff === 5 -> write: Last updated 5 days ago
 });
+
+const icon = document.getElementById("theme-icon");
+
+const lightIcon = "light.png";
+const darkIcon = "dark.png";
+
+let currentMode = "light";
+
+icon.addEventListener("click", () => {
+  if (currentMode === "light") {
+    icon.src = darkIcon;
+    currentMode = "dark";
+  }
+  else if (currentMode === "dark") {
+    icon.src = lightIcon;
+    currentMode = "light";
+  }
+})

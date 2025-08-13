@@ -17,6 +17,23 @@ html {
   scroll-behavior: smooth; /* less choppy scrolling */
 }
 
+#theme-toggle {
+  position: absolute; 
+  top: 16px;
+  right: 16px;
+  background: none; 
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: fixed;
+}
+
+#theme-toggle img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
 body {
   font-family: var(--body-font);
   color: #333;
