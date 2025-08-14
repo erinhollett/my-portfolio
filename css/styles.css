@@ -235,6 +235,14 @@ p {
 }
 
 /* == Project Information == */
+.project-details img { 
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  display: block; 
+  margin: 12px auto 16px; 
+}
+
 .project-details {
   display: none;
   max-width: 700px;
