@@ -130,6 +130,36 @@ p {
   font-size: 16px;
   color: var(--text);
 }
+/* == About Section == */
+.about-points {
+  max-width: var(--max-width);
+  margin: 12px auto;       
+  padding: 0 16px 0 32px;      
+  list-style: disc;
+}
+.about-points li {
+  color: var(--text);
+  margin: 6px 0;
+}
+
+.about-link {
+  max-width: var(--max-width);
+  margin: 8px auto 0;
+  padding: 0 16px;
+}
+
+.about-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+  transition: color .2s ease;
+}
+.about-link a:hover,
+.about-link a:focus-visible {
+  color: var(--accent-strong);
+}
 
 /* == Skills Section == */
 .skills-list {
