@@ -60,10 +60,11 @@ function validateForm() {
 // Timestamp in footer of when website was last updated
 document.addEventListener("DOMContentLoaded", () => {
   const lastUpdate = document.getElementById("last-updated");
-  const raw = lastUpdate.dataset.updated;
-  const updatedDate = moment(raw);
-  const now = moment(); // Creates the moment.js element
-  const diff = now.diff(updatedDate, 'days'); // Calc days passed between current time and updatedDate
+  const raw = lastUpdate?.dataset.updated;
+  if (!raw) return;
+  const updatedLocal = moment.utc(raw).local().startOf("day");
+  const todayLocal   = moment().startOf("day");
+  const diff = todayLocal.diff(updatedLocal, "days"); // Calc days passed between current time and updatedDate
   lastUpdate.textContent = `Last updated ${diff === 0 ? 'today' : `${diff} day${diff > 1 ? 's' : ''} ago`}`; // Display in html
   // If diff === 0 -> write: Last updated today
   // If diff === 1 -> write: Last updated 1 day ago
