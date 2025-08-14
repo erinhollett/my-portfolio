@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const icon = document.getElementById("theme-icon");
 const toggleTheme = document.getElementById("theme-toggle");
 
-const lightIcon = "light.png";
-const darkIcon = "dark.png";
+const lightIcon = "img/toggle-light.png";
+const darkIcon = "img/toggle-dark.png";
 
 // Start the current mode at light be default
 let currentMode = "light";

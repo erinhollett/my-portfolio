@@ -46,6 +46,7 @@ html {
   scroll-behavior: smooth; /* less choppy scrolling */
 }
 
+/* == Light/Dark Theme Toggle == */
 #theme-toggle {
   position: absolute; 
   top: 16px;
